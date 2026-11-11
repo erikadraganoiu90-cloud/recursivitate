@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="recursivitate.vcxproj" Id="e54041e1-b5b4-4dcf-ad24-092902c26582" />
+</Solution>
