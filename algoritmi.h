@@ -5,9 +5,14 @@
 
 using namespace std;
 
+
+//factorial(0)=> n==0 true return 1
+//factorial(1)=> n==0 false return 1*factorial(0)[] return 1
+//factorial(2)=> n==0 false return 2*factorial(1)[] return 2
+//factorial(3)=> n==0 false return 3*factorial(2)[] return 6
+//factorial(4)=> n==0 false retrun 4*factorial(3)[] return 24
 int factorial(int n)
 {
-    //  factorial(3) -> 3 * factorial(2) -> 3 * 2 * factorial(1) -> 3 * 2 * 1 * factorial(0) -> 3 * 2 * 1 * 1
     if (n == 0)
     {
         return 1;
@@ -16,9 +21,14 @@ int factorial(int n)
     return n * factorial(n - 1);
 }
 
+//putere(3,0)=>exp==0 true  return  1
+//putere(3,1)=>exp==0 false return 3*putere(3,0)[]  return 3
+//putere(3,2)=>exp==0 false return 3*putere(3,1)[]  return 9
+//putere(3,3)=>exp==0 false return 3*putere(3,2)[]  return 27  
+//putere(3,4)=>exp==0 false return 3*putere(3,3)[]  return 81
 int putere(int baza, int exp)
 {
-    //  putere(2, 3) -> 2 * putere(2, 2) -> 2 * 2 * putere(2, 1) -> 2 * 2 * 2 * putere(2, 0) -> 2 * 2 * 2 * 1
+  
     if (exp == 0)
     {
         return 1;
@@ -27,9 +37,14 @@ int putere(int baza, int exp)
     return baza * putere(baza, exp - 1);
 }
 
+//sumaCifre(0)   =>n==0 true return 0
+//sumaCifre(1)   =>n==0 false return 1+sumacifre(0)[]   return 1
+//sumaCifre(12)  =>n==0 false return 2+sumaCifre(1)[]   return 3
+//sumaCifre(123) =>n==0 false return 3+sumaCifre(12)[]  return 6
+//sumaCifre(1234)=>n==0 false return 4+sumaCifre(123)[] return 10
 int sumaCifre(int n)
 {
-    //  sumaCifre(472) -> 2 + sumaCifre(47) -> 2 + 7 + sumaCifre(4) -> 2 + 7 + 4 + sumaCifre(0) -> 13
+    
     if (n == 0)
     {
         return 0;
@@ -38,6 +53,11 @@ int sumaCifre(int n)
     return n % 10 + sumaCifre(n / 10);
 }
 
+
+//nrCifre(1)   =>n<10 true return 1
+//nrCifre(12)  =>n<10 false return 1+nrCifre(1)[]   return 2
+//nrCifre(123) =>n<10 false return 1+nrCifre(12)[]  return 3
+//nrCifre(1234)=>n<10 false return 1+nrCifre(123)[] return 4
 int nrCifre(int n)
 {
     if (n < 10)
@@ -48,9 +68,14 @@ int nrCifre(int n)
     return 1 + nrCifre(n / 10);
 }
 
+//oglindit(0,24321)=>n==0 true return 24321
+//oglindit(1,2432) =>n==0 false return oglindit(0,24321)[]  return 24321
+//oglindit(12,234) =>n==0 false return oglindit(1,2432)[]   return 24321
+//oglindit(123,24) =>n==0 false return oglindit(12,243)[]   return 24321
+ //oglindit(1234,2)=>n==0 false return oglindit(123,24)[]   return 24321
 int oglindit(int n, int r)
 {
-    //  oglindit(472, 0) -> oglindit(47, 2) -> oglindit(4, 27) -> oglindit(0, 274) -> 274
+     
     if (n == 0)
     {
         return r;
@@ -59,6 +84,9 @@ int oglindit(int n, int r)
     return oglindit(n / 10, r * 10 + n % 10);
 }
 
+
+
+//oglindit(1234)=>return oglindit(1234,0)
 int oglindit(int n)
 {
     return oglindit(n, 0);
@@ -69,9 +97,13 @@ bool estePalindrom(int n)
     return n == oglindit(n);
 }
 
+//cmmdc(2,0)=>b==0 true return 2
+//cmmdc(4,2)=>b==0 false return cmmdc(2,0)[]  return 2
+//cmmdc(6,4)=>b==0 false return cmmdc(4,2)[]  return 2
+//cmmdc(4,6)=> b==0 false return cmmdc(6,4)[] return 2
 int cmmdc(int a, int b)
 {
-    //  cmmdc(48, 18) -> cmmdc(18, 12) -> cmmdc(12, 6) -> cmmdc(6, 0) -> 6
+    
     if (b == 0)
     {
         return a;
@@ -80,9 +112,15 @@ int cmmdc(int a, int b)
     return cmmdc(b, a % b);
 }
 
+
+
+//fib(0)=>n<2 
+//fib(1)=> n<2 true return 1
+//fib(2)=> n<2 false return fib(1)[] return 1+fib(0)[]  return 1
+//fib(4)=>n<2 false return fib(3)[] 2+ fib(2)[]
 int fib(int n)
 {
-    //  fib(4) -> fib(3) + fib(2) -> (fib(2) + fib(1)) + (fib(1) + fib(0)) : fib(2) se calculeaza de doua ori
+     
     if (n < 2)
     {
         return n;

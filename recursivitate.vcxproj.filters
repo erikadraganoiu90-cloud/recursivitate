@@ -23,5 +23,41 @@
     <ClInclude Include="algoritmi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="factorial-putere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cifre-recursiv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="oglindit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cmmdc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="afisare-apel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="suma-maxim-vectorr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fibonacci.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cautare-binara.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="palindrom-vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="divide-et-impera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hanoi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="void-referinta.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

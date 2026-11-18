@@ -142,7 +142,19 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="afisare-apel.h" />
     <ClInclude Include="algoritmi.h" />
+    <ClInclude Include="cautare-binara.h" />
+    <ClInclude Include="cifre-recursiv.h" />
+    <ClInclude Include="cmmdc.h" />
+    <ClInclude Include="divide-et-impera.h" />
+    <ClInclude Include="factorial-putere.h" />
+    <ClInclude Include="fibonacci.h" />
+    <ClInclude Include="hanoi.h" />
+    <ClInclude Include="oglindit.h" />
+    <ClInclude Include="palindrom-vector.h" />
+    <ClInclude Include="suma-maxim-vectorr.h" />
+    <ClInclude Include="void-referinta.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
