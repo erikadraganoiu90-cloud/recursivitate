@@ -38,7 +38,7 @@ int main()
     //int n = 38738;
     //taieMaxima(n);
     //cout << n  ;
-
-     
+    //numaratoareInversa(5);
+    numaratoareDirecta(3);
 
 }

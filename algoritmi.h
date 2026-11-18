@@ -129,9 +129,17 @@ int fib(int n)
     return fib(n - 1) + fib(n - 2);
 }
 
+
+
+//fibRapid(0,5,8)=>n==0 true return 5
+//fibRapid(1,3,5)=>n==0 false return fibRapid(0,5,8)[]  return 5
+//fibRapid(2,2,3)=>n==0 false return fibRapid(1,3,5)[]  return 5
+//fibRapid(3,1,2)=>n==0 false return fibRapid(2,2,3)[]  return 5
+//fibRapid(4,1,1)=>n==0 false return fibRapid(3,1,2)[]  return 5
+//fibRapid(5,0,1)=>n==0 false return fibRapid(4,1,1)[]  return 5
 int fibRapid(int n, int a, int b)
 {
-    //  fibRapid(5, 0, 1) -> (4, 1, 1) -> (3, 1, 2) -> (2, 2, 3) -> (1, 3, 5) -> (0, 5, 8) -> 5
+     
     if (n == 0)
     {
         return a;
@@ -140,28 +148,51 @@ int fibRapid(int n, int a, int b)
     return fibRapid(n - 1, b, a + b);
 }
 
+//numaratoareInversa(0)=> n>0 false                                                                 Ecran:5 4 3 2 1
+//numaratoareInversa(1)=> n>0 true cout<< 1 numaratoareInversa(2)[]
+//numaratoareInversa(2)=> n>0 true cout<< 2 numaratoareInversa(1)[] 
+//numaratoareInversa(3)=> n>0 true cout<< 3 numaratoareInversa(2)[]  
+//numaratoareInversa(4)=> n>0 true cout<< 4 numaratoareInversa(3)[]  
+//numaratoareInversa(5)=> n>0 true cout<< 5 numaratoareInversa(4)[]  
+
+
+
+//numaratoareInversa(0)=> n>0 false                                                                 Ecran:5 4 3 2 1 0 1 2 3 4
+//numaratoareInversa(1)=> n>0 true cout<< 1 numaratoareInversa(2)[] cout<<0
+//numaratoareInversa(2)=> n>0 true cout<< 2 numaratoareInversa(1)[] cout<<1
+//numaratoareInversa(3)=> n>0 true cout<< 3 numaratoareInversa(2)[] cout<<2
+//numaratoareInversa(4)=> n>0 true cout<< 4 numaratoareInversa(3)[] cout<<3 
+//numaratoareInversa(5)=> n>0 true cout<< 5 numaratoareInversa(4)[] cout<<4                                                            
 void numaratoareInversa(int n)
 {
     if (n > 0)
     {
         cout << n << " ";
         numaratoareInversa(n - 1);
+        cout << n - 1 << " ";
     }
 }
 
+//numaratoareDirecta(0)=> n>0 false                                             Ecran: 1 2 3
+//numaratoareDirecta(1)=> n>0 true numaratoareDirecta(0)[] cout<<1
+//numaratoareDirecta(2)=> n>0 true numaratoareDirecta(1)[] cout<<2
+//numaratoareDirecta(3)=> n>0 true numaratoareDirecta(2)[] cout<<3
 void numaratoareDirecta(int n)
 {
-    //  numaratoareDirecta(3) -> numaratoareDirecta(2) -> numaratoareDirecta(1) -> numaratoareDirecta(0) | 1 | 2 | 3
-    if (n > 0)
-    {
+    
+    if (n > 0) {
+
         numaratoareDirecta(n - 1);
         cout << n << " ";
     }
 }
 
+
+
+//cifreInOrdine(472)=>n>0 true cifreInOrdine(47)[]                                            
 void cifreInOrdine(int n)
 {
-    //  cifreInOrdine(472) -> cifreInOrdine(47) -> cifreInOrdine(4) -> cifreInOrdine(0) | 4 | 7 | 2
+     
     if (n > 0)
     {
         cifreInOrdine(n / 10);
